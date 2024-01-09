@@ -1,6 +1,6 @@
 # #!/bin/bash
  
-# DIRECTORY='C:\Users\CAF5479\Desktop\DME-377 script test'  
+# DIRECTORY=''  
 # # Replace with your directory path
  
 # for FILE in "$DIRECTORY"/*.json; do    
@@ -25,7 +25,7 @@
  
 #This script is adding an item to the end of the list in json files
 #Modify DIRECTORY, list name(in our case - 'project.apis'), and item to be added(in our case - "policyanalyzer.googleapis.com") 
-DIRECTORY='C:\Users\CAF5479\Desktop\Scripts\devsecops_gcp-environments-registry-prd'  
+DIRECTORY=''  
 for FILE in "$DIRECTORY"/*.json; do
     # Check if 'project.apis' contains 'policyanalyzer.googleapis.com'
     if jq '.project.apis | if type == "array" then contains(["policyanalyzer.googleapis.com"]) else false end' "$FILE" | grep -q false; then
