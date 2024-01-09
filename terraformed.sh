@@ -7,7 +7,7 @@
 
 
 # Directory to start the search from
-root_directory="C:\Users\CAF5479\Desktop\Scripts\devsecops_terraform-g-prod-terraform-execute-repo"
+root_directory=""
 # Function to update services_list in a file
 update_services_list() {
     local file=$1
